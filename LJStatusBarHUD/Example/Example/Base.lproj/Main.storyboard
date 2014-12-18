@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jx4-g5-83v">
+                                <rect key="frame" x="237" y="73" width="126" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="WLk-pB-Jb5"/>
+                                    <constraint firstAttribute="height" constant="47" id="gt8-4t-BkR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="错误信息">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="errorMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="woU-l8-nfb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dp5-7j-sYb">
+                                <rect key="frame" x="237" y="243" width="126" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="正在加载">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oee-CI-PJt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoj-w1-vwP">
+                                <rect key="frame" x="237" y="331" width="126" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="隐藏加载">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideLoadMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y2D-3D-V0l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpg-4R-d08">
+                                <rect key="frame" x="237" y="428" width="126" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="自定义内容">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="customMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IYd-AS-kmR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsg-Jq-osf">
+                                <rect key="frame" x="237" y="156" width="126" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="正确信息">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SuN-pZ-ckR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dp5-7j-sYb" firstAttribute="top" secondItem="Vsg-Jq-osf" secondAttribute="bottom" constant="40" id="4MX-Su-7nR"/>
+                            <constraint firstItem="jx4-g5-83v" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="53" id="4T4-X3-O4O"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="width" secondItem="Jpg-4R-d08" secondAttribute="width" id="7g7-YN-C4W"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="height" secondItem="zoj-w1-vwP" secondAttribute="height" id="7zc-cY-iIq"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="leading" secondItem="zoj-w1-vwP" secondAttribute="leading" id="PsG-fO-Cpq"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="top" secondItem="jx4-g5-83v" secondAttribute="bottom" constant="36" id="RmP-h8-quG"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="height" secondItem="Dp5-7j-sYb" secondAttribute="height" id="W6x-F3-ywQ"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="width" secondItem="jx4-g5-83v" secondAttribute="width" id="Ynv-GT-a5m"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="leading" secondItem="Dp5-7j-sYb" secondAttribute="leading" id="amk-m9-LOT"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="height" secondItem="Jpg-4R-d08" secondAttribute="height" id="bnw-CV-uYt"/>
+                            <constraint firstAttribute="centerX" secondItem="jx4-g5-83v" secondAttribute="centerX" id="eaB-sm-i4v"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="leading" secondItem="jx4-g5-83v" secondAttribute="leading" id="iaC-qh-9h8"/>
+                            <constraint firstItem="zoj-w1-vwP" firstAttribute="top" secondItem="Dp5-7j-sYb" secondAttribute="bottom" constant="41" id="mPW-B6-xG9"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="width" secondItem="Dp5-7j-sYb" secondAttribute="width" id="sfh-ZM-0RW"/>
+                            <constraint firstItem="Jpg-4R-d08" firstAttribute="top" secondItem="zoj-w1-vwP" secondAttribute="bottom" constant="50" id="t5A-lV-u0E"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="width" secondItem="zoj-w1-vwP" secondAttribute="width" id="v92-Mu-TT7"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="height" secondItem="jx4-g5-83v" secondAttribute="height" id="ySg-Ru-azl"/>
+                            <constraint firstItem="Vsg-Jq-osf" firstAttribute="leading" secondItem="Jpg-4R-d08" secondAttribute="leading" id="zRm-sQ-2MY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="rightMessage" destination="Vsg-Jq-osf" id="Rss-cQ-kat"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
